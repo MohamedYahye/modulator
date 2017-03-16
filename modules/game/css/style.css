@@ -1,0 +1,100 @@
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	width:80%;
+	height:750px;
+	border:5px solid black;
+	position: relative;
+}
+#winLose {
+	width:300px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:20px;
+}
+#xpBar {
+	margin-left: auto;
+	margin-right: auto;
+	width:100px;
+	height:20px;
+}
+#character , #enemy {
+	margin-top:5%;
+}
+#character {
+	float:left;
+	margin-left:3%;
+}
+#enemy {
+	float:right;
+	margin-right:10px;
+}
+#character, #enemy {
+	width:500px;
+	height:100px;
+	text-align: center;	
+}
+#characterHP {
+	border:2px solid green;
+}
+#enemyHP {
+	border:2px solid red;
+}
+#characterHP, #enemyHP {
+	margin-left: auto;
+	margin-right: auto;
+	width:300px;
+	height:25px;
+}
+#charactersD {
+	border:2px solid red;
+}
+#charactersR {
+	border:2px solid green;
+}
+#charactersD, #charactersR {
+	width:100%;
+	height:auto;
+}
+#damageDealt {
+}
+#characterName , #enemyName {
+	font-size:25px;
+}
+#buttons {
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	height:20px;
+	width:130px;
+}
+#skillbar {
+	height:100px;
+	border:1px solid black;
+	margin-left:30%;
+	margin-bottom:10%;    
+	position: absolute;
+    bottom: 0;
+}
+#skillbar ul {
+	margin:0 auto;
+	padding:0;
+}
+#skillbar li {
+	margin-left:108px;
+	list-style: none;
+	float:left;
+}
+
+#skillbar li:first-child {
+	margin-left: 0px;
+}
+#skillLevels {
+	margin-bottom:10px;
+	position: absolute;
+}
+#damageD p {
+    margin: 0;
+    padding: 0;
+}

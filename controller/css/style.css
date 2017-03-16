@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+.warpper{
+
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+
+}
+
+.inner_wrap{
+	margin-top: 20%;
+	margin-left: 30%;
+	width: 50%;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Varela Round', sans-serif;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.content {
+	margin-left: 140px;
+}
+
+.content > a{
+
+}
+
+.content a > button{
+	width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    background-color: #0e83cd;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;
+
+	
+}
+
+
+#beheerder > button{
+	background-color: #2ecc71;
+
+}
+
+#beheerder > button:hover{
+	background-color: #fff;
+	color: #2ecc71;
+	border-color: #2ecc71;
+
+	transition-delay: 2s;
+    transition: background-color 1s ease;
+}
+
+.content > a > button:hover{
+	background-color: #fff;
+	color: #0e83cd;
+	border-color: #0e83cd;
+	transition-delay: 2s;
+    transition: background-color 1s ease;
+}

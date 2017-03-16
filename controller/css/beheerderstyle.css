@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.wrapper{
+	margin: 0;
+	padding: 0;
+}
+
+
+.inner_wrap{
+	
+	margin-left: 10%;
+
+
+}
+
+.inner_wrap > h1{
+	margin-top: 5%;
+	font-family: 'Varela Round', sans-serif;
+	margin-left: 50px;
+}
+
+.form{
+	margin-top: 10%;
+}
+
+
+.form > form > input{
+
+
+	width: 500px;
+	height: 35px;
+	outline: none;
+	margin-left: 50px;
+	padding-left: 5px;
+	font-family: 'Varela Round', sans-serif;
+	background-color: #fdfdfd;
+    border: 1px solid #d4d4d4;
+
+}
+
+.form > form > input[name="leerjaar"]{
+	width: 1063px;
+
+}
+.form > form > input[name="submit"]{
+	width: 1072px;
+	background-color: #0e83cd;
+    border: 1px solid #1d6fa2;
+    color: #fff;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+
+.form > form > input:hover{
+
+	background-color: #f1f1f1;
+	border: 1px solid #e2e2e2; 
+	transition-delay: 2s;
+    transition: background-color 1s ease;
+}
+
+
+.form > form > input[type='submit']:hover{
+
+	background-color: #fff;
+	color: #0e83cd;
+	border-color: #0e83cd;
+	transition-delay: 2s;
+    transition: background-color 1s ease;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+#message{
+	margin-top: 75px;
+	position: absolute;
+	margin-left: 50px;
+	font-family: 'Varela Round', sans-serif;
+}
+
+#student > button {
+	position: absolute;
+    margin-left: 730px;
+    top: 95px;
+    width: 250px;
+    height: 40px;
+}

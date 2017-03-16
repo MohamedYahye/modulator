@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Damage</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="name(); charactersInfo()">
+	<div id="container">
+		<div id="winLose"></div>
+		<div id="character">
+			<div id="level"></div>
+			<div id="xpBar"></div>
+			<div id="characterName"></div>
+			<div id="characterHP"></div>
+			<div id="charactersD"></div>
+		</div>
+
+		<div id="enemy">
+			<div id="enemyLevel"></div>
+			<div id="enemyName"></div>
+			<div id="enemyHP"></div>
+			<div id="charactersR"></div>
+
+		</div>
+		<div id="buttons">
+			<button id="damageDealt" onClick="damageTime();">Damage</button>
+			<button id="stopInterval" onClick="stopInterval();">Stop</button>
+		</div>
+		<div id="skillbar">
+			<ul>
+				<li><img id="skills_attack" class="skills"
+					src="images/attack_skill.png">
+					<div id="attack"></div>
+				</li>
+				<li><img id="skills_strength" class="skills" 
+					src="images/strength_skill.png">
+					<div id="strength"></div>
+				</li>
+				<li><img id="skills_defence" class="skills"
+					src="images/defence_skill.png">
+					<div id="defence"></div>
+				</il>
+			</ul>
+
+			<ul>
+			<li></li>
+			<li></lI>
+			<li></li>
+			</ul>
+
+		</div>
+		<div id="skillPoints"></div>
+		<script src="js/array.js"></script>
+		<script src="js/functions.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
+
