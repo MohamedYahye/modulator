@@ -31,7 +31,7 @@
 				$dbh = $this->connection->returnConnection();
 
 
-				$stmt = $dbh->prepare("SELECT name, student_id FROM student WHERE recht_id=:recht_id");
+				$stmt = $dbh->prepare("SELECT username, name, student_id FROM student WHERE recht_id=:recht_id");
 
 				$recht_id = 1;
 

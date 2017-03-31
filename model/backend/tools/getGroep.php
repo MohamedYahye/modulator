@@ -18,12 +18,12 @@
 
 				$dbh = $connect->returnConnection();
 
-				$stmt = $dbh->prepare("SELECT * FROM koppeltabel");
+				$stmt = $dbh->prepare("SELECT DISTINCT groep_id FROM koppeltabel");
 
 				$stmt->execute();
 
 				if($stmt->rowCount() > 0){
-					$result = $stmt->fetchAll();
+					$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 					return $result;
 				}
@@ -52,7 +52,7 @@
 				$stmt->execute();
 
 				if($stmt->rowCount() > 0){
-					$result = $stmt->fetchAll();
+					$result = $stmt->fetch(PDO::FETCH_ASSOC); 
 
 					return $result;
 				}
@@ -62,6 +62,10 @@
 			}
 
 		}
+
+
+
+		
 	}
 
 

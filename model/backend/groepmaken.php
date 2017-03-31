@@ -15,6 +15,7 @@
 <head>
 	<title>Groepmaken</title>
 	<link rel="stylesheet" type="text/css" href="../../controller/css/groepmaken.css">
+	<link rel="stylesheet" type="text/css" href="../../controller/css/pure-table.css">
 	<script  type="text/javascript" src="../../controller/js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../controller/css/font-awesome-4.7.0/css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -59,26 +60,45 @@
 
 
 			<div class="existing_group">
+			
+				<div class="groep">
+					<h3>Bestaande groepen</h3>
+					<?php 
 
-				<h3>Existing group</h3>
-				<?php 
+
+						require_once("tools/getGroep.php");
+
+						$group = new Group();
+
+						$groupArray = $group->Group();
+
+						$groupName = array();
+
+						echo "<table id='data-table'class='pure-table pure-table-bordered'><thead><th>Goepsnaam</th><th>Bewerken</th><th>Verwijderen</th></tr></thead><tbody>";
+
+						foreach($groupArray as $groups){
+
+							$groupName = $group->getgroupName($groups['groep_id']);
+
+							foreach($groupName as $name){
+
+								echo "
+							        <tr>
+							           <td><span class='groep_naam'>" . $name . "</span></td>
+							           <td><a href=editgroep.php?group=".base64_encode($name)."><i class='fa fa-pencil-square-o edit' aria-hidden='true'></i></a></td>
+							           <td><i class='fa fa-trash delete' aria-hidden='true'></i></td>
+
+							        </tr>";
+							}
+
+						}
+
+						echo "</tbody></table><br />";
 
 
-					require_once("tools/getGroep.php");
 
-					$group = new Group();
-
-					$groupArray = $group->Group();
-
-					foreach($groupArray as $groups){
-
-						$groupName = $group->getgroupName($groups['groep_id']);
-						echo "<pre>";
-						var_export($groupName);
-
-					}
-				?>
-
+					?>
+				</div>
 
 			</div>
 
@@ -89,6 +109,8 @@
 
 
 	</div>
+
+
 
 </body>
 
@@ -111,10 +133,8 @@
 				$(".form").append("<input type='hidden' name='checked["+$(this).parent().attr("id")+"]'value="+$(this).parent().attr('id')+">");
 
 			})
-
-
 		})
-
+			
 
 	</script>
 

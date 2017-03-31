@@ -76,10 +76,39 @@
 
 .existing_group{
 	width: 492px;
-	padding: 5px;
-	border: 1px solid #dadada;
-	position: absolute;
-    left: 40%;
+    padding: 5px;
+    /*border: 1px solid #dadada;*/
+    position: absolute;
+    left: 55%;
     float: left;
-    top: 16.5%;
+    top: 22.5%;
+
+    padding: 5px;
+}
+
+.groep > h3{
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.edit{
+	position: absolute;
+	left: 35%;
+	cursor: pointer;
+	color: #dadada;
+}
+
+
+.delete{
+	position: absolute;
+	left: 58%;
+	cursor: pointer;
+	color: #dadada;
+}
+
+.edit:hover{
+	color: #000;
+}
+.delete:hover{
+	color: #000;
 }

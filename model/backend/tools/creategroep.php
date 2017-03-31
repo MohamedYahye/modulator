@@ -79,15 +79,17 @@
 
 
 				$stmt = $dbh->prepare("INSERT INTO koppeltabel (groep_id, student_id) VALUES(:groep_id, :student_id)");
-
+				$stmt->bindParam(":groep_id", $groep_id);
 				foreach($studentIdArray as $student){
-					
-					$stmt->bindParam(":groep_id", $groep_id);
-
 					$stmt->bindParam(":student_id", $student);
-					$stmt->execute();
+					
+					if($stmt->execute()){
+						header("Location:../groepen.php");
+					}else{
+						echo "oeps.. group not made";
+					}
 
-					echo $dbh->lastInsertId();
+					//echo $dbh->lastInsertId();
 				}				
 
 
