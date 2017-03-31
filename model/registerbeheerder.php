@@ -91,13 +91,17 @@
 
 
 		private function RegisterBeheerder(){
-			require("passHash.php");
+			//require("passHash.php");
+
+			
 
 			try{
 
+				require("passHash.php");
+
 				$recht_id = "0";
 
-				$passHash = new PassHash();
+				$passHash = new passHash();
 
 				$unhashed = $this->returnPassword();
 				$hash = $passHash->hash($unhashed);
@@ -105,12 +109,20 @@
 
 				$dbh = $this->connect->returnConnection();
 
+
+				$name = $this->returnName();
+				$username = $this->returnUsername();
+				$email = $this->returnEmail();
+
+
 				$stmt = $dbh->prepare("INSERT INTO beheerder (name, username, email, password, recht_id) 
 					VALUES(:name, :username, :email, :password, :recht_id)");
 
-				$stmt->bindParam(":name", $this->returnName());
-				$stmt->bindParam(":username", $this->returnUsername());
-				$stmt->bindParam(":email", $this->returnEmail());
+
+
+				$stmt->bindParam(":name", $name);
+				$stmt->bindParam(":username", $username);
+				$stmt->bindParam(":email", $email);
 				$stmt->bindParam(":password", $hash);
 				$stmt->bindParam(":recht_id", $recht_id);
 

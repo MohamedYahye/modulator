@@ -79,11 +79,23 @@
 				if($stmt->rowCount() > 0){
 					while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 						$password = $this->returnPassword();
+
+						
 						$check = $pashash->check_password($row['password'], $password);
 
 
 						if($check){
-							echo $row['uitstroom'];
+							
+							require("session.php");
+
+							$session = new session();
+
+							$session->setUser($row['student_id']);
+
+							header("Location: backend/index.php");
+							die();
+
+
 						}else{
 							echo "incorrect password <br />";
 						}

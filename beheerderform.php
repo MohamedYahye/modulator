@@ -62,7 +62,7 @@
 
 		<h3 id="message" style="margin-left: 50px; margin-top: 75px; position: absolute; font-family: 'Varela Round', sans-serif;">* = Verplicht</h3>
 
-			<a href="login.php" id="student"><button id="login_student">Login</button></a>
+			<a href="loginBeheerder.php" id="student"><button id="login_student">Login</button></a>
 
 			<div class="form">
 				<form name="studentform" id="studentform" method="POST" action="model/registerbeheerder.php">
